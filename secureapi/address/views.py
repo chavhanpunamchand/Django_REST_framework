@@ -3,7 +3,7 @@ from rest_framework.viewsets import ModelViewSet,ReadOnlyModelViewSet
 from .models import *
 from .serializers import *
 from rest_framework.permissions import AllowAny
-from  rest_framework_xml.renderers import XMLRenderer
+# from  rest_framework_xml.renderers import XMLRenderer
 from rest_framework.decorators import renderer_classes
 from rest_framework.permissions import IsAuthenticated
 class AddressOperations(ModelViewSet): #list

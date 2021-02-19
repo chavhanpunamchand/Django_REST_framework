@@ -5,5 +5,5 @@ from .models import Emp
 class EmpSerialization(ModelSerializer):
     class Meta:
         model = Emp
-        fields  = '__all__'
+        fields = '__all__'
 
