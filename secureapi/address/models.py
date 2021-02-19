@@ -22,7 +22,7 @@ class Student(models.Model):
 class Courses(models.Model):
     coursename = models.CharField(max_length=40)
     coursefees = models.IntegerField()
-    students = models.ForeignKey(Student,on_delete=models.CASCADE,
-                                 related_name='courses')
+    # students = models.ForeignKey(Student,on_delete=models.CASCADE,
+    #                              related_name='courses')
     class Meta:
         db_table = 'COURSE_INFO'
