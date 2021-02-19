@@ -1,0 +1,134 @@
+
+REST API Configuration -->
+
+	pip install djangorestframework
+	pip install django-rest-swagger
+
+
+Both applciation register kara ---> inside settings py ---> to enable the functionality of these applciations
+	installed apps -->
+				'rest_demo', # our application name
+				'rest_framework', # DRF enables rest api functionlity
+				'rest_framework_swagger' # Swagger documentation part req and res objects formats
+
+
+
+
+							GenericMix
+
+		CreateMix		UpdateMixin		ListMixIn		RetriveMix 	 			DeleteMix
+			-insert			--update		--getall		--single				--delete
+
+
+
+								MOdelViewSet(GenericMix,createmix,updateMix,ListMixIn.....)
+
+									--> 6 features--->
+											create	--> insert
+											update	--> full update
+											delete	--> delete
+											get		--> single retrive
+											getall	--> get all
+											patch --> partial update
+
+
+				DRF  -->	serializer	--> viewsets ---> routers
+
+							SERIALIZERS -->CONVERT PYTHON MODEL INSTANCES INTO JSON
+							VIEWSETS ---> SET OF OPERTAIONS --> SUCH AS CRUD --CREATE UPDATE PARTIAL_UPDATE RETRIVE LIST DELETE
+							ROUTERS  --> BUNDLEE OF URLS --> 6 URIS;\
+
+					MODEL -->
+							ALL METHOODS
+							SERIALIZATIONS
+							URIS  ---> DRF
+
+					REQUEST-RESPONSE OBJECT EXTRACT --> SWAGGER -->
+							SWAGGER --> API TESTING AS WE DO INSIDE POST -->
+							CURL --> LINUX MACHINE COMMAND LINE UTLITY -- REST API TESTING SATHI
+							HTTPIE --> WINDOWS MACHINE COMMAND LINE UTLITY - REST API TESTING SATHI
+							POSTMAN --> CHROME PLUGIN-- OR INSTALLER -->REST API TESTING SATHI
+							REQUEST LIBS --> AUTOMATION-- OR TO CONSUME APIS..
+
+
+			MIXIN CLASSES --> WHICH HOLDS SEPERATE SEPERATE FUNCTIONLITY --
+					MODELVIEWSET --> CREATE/UPDATE/DELETE/RETRIVE/LIST -- MIXIN CHILDS
+					READONLYVIEWSET -- RETRIVE/LIST --> MIXIN CHILD
+
+				SWAGGER -->
+
+
+					SC1										SC2
+
+					A B C D E F								A
+																-6 functionalities
+
+
+
+					X(C,D)									X(A)	--> 6
+						--> only c and d					X()		--> 0
+							functionalities will
+							be avaible to X
+
+
+					X(A,D,C,E)	-->
+
+
+	What is
+			routers	--> DefaultRouter/SimpleRouter
+			viewsets --> ModelViewSet/ReadOnlyViewSet
+			serializers --> ModelSerializer/HyperLinkSerializer
+			mixin --> create/update/detroy/list/retrive
+
+
+
+						custom viewset --> MyOwNViewSet
+
+		Authencations ---> is related -> credentails correct ahet -> username/password -- atm pin -->
+		Authorization  --> it's more related to roles and responbilities
+
+
+								Authentication
+	Dmart Staff Manager -->		Yes					At place changes/ add/update --->
+	Dmart Sales Person -->		Yes					NO
+
+	Authentication --> credentails
+				BASIC AUTHENTICATION ---> 	USERNAME AND PASSWORD
+				TOKEN BASED AUTHENTICATION -->
+											USERNAME AND PASSWORD -->
+															TOKEN
+																THEREAFTER
+																	USE TOKEN --TO ACCESS API --> AS LONG AS WE EXPLICITY EXPIRE
+				SESSION BASED AUTHENTICATION
+											USERNAME AND PASSWORD
+															TOKEN
+																ONLY WITHIN THAT SESSION
+																		AS LONG AS LOGOUT
+
+
+				POSSESION BASED -->
+								-->ATM
+								--> BIOMETRIC
+								--> OTP
+								--ID CARDS
+				MULTIFACTOR	-->
+								MORE THAN 1 --> AUTHENTICATION MECHANISM USE KELE AHET..
+
+							-->
+									EMAIL -3
+									MOBILE 3
+
+							--> ATM
+								PIN
+
+
+
+	Ofc -- Cabin
+
+	OFc madhe entry -->
+					CEO			--> only that person
+					EMps
+					Managers
+					HousekeepingStaff -->
+
+	
