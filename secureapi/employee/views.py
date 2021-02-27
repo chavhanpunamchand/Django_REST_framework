@@ -23,7 +23,7 @@ class MyCustomPersmission(BasePermission):
 
 
 class EmpOperations(ModelViewSet):
-    permission_classes = (MyCustomPersmission,)
+    # permission_classes = (MyCustomPersmission,)
     queryset = Emp.objects.all()
     serializer_class = EmpSerialization
     #`create()`, `retrieve()`, `update()`,
